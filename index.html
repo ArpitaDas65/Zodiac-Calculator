@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know your Zodiac</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><b>WANT TO KNOW YOUR ZODIAC SIGN ?</b></h1>
+    <br>
+    <h2><b><i>Just fill this form & connect with your true self...</i></b></h2>
+
+    <form>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name Here..." required>
+        <input type="text" name="surname" id="surname" placeholder="Enter Your Surname Here.." required>
+        <input type="number" name="birthday" id="day" placeholder="Enter Birth Day.." required>
+        <input type="number" name="birthmonth" id="month" placeholder="Enter Birth Month.." required>
+        <input type="number" name="birthyear" id="year" placeholder="Enter Birth Year.." required>
+        <button class="button" type="button"onclick="generateMessage()">Calculate</button>
+    </form>
+        <p id="output"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>

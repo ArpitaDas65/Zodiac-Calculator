@@ -1,0 +1,215 @@
+
+    @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+    height: 109vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e8ffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+}
+
+:root {
+    --cyan: #00ffff;
+    --green: #00c006;
+    --neon-soft: 0 0 10px;
+    --neon-strong: 0 0 20px;
+    --neon-soft2: 0 0 30px;
+    --neon-strong2: 0 0 40px;
+}
+
+/* If device has weak performance, reduce neon */
+@media (prefers-reduced-motion: reduce),
+(update: slow) {
+    :root {
+        --neon-soft: 0 0 4px;
+        --neon-strong: 0 0 8px;
+        --neon-soft2: 0 0 10px;
+        --neon-strong2: 0 0 18px;
+    }
+}
+
+h1 {
+    position: sticky;
+    top: 30px;
+    margin-bottom: 40px;
+    font-size: 3.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(247, 247, 247);
+    animation: neonTitle 3s infinite alternate;
+    z-index: 1000;   
+}
+
+h1:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+    color: white;
+}
+
+@keyframes neonTitle {
+    0% {
+        text-shadow: var(--neon-soft2) var(--cyan);
+    }
+
+    50% {
+        text-shadow: var(--neon-strong2) var(--cyan);
+    }
+
+    100% {
+        text-shadow: var(--neon-soft2) var(--cyan);
+    }
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    margin: 10px auto 7px;
+    border-radius: 11px;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+
+input {
+    background: #1a1a1a;
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 14px;
+    margin: 10px 10px 8px 10px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    animation: neonInput 2s infinite ease-in-out;
+}
+
+input:focus,
+input:hover {
+    transition: 0.3s linear;
+    transform: scale(1.12);
+    border-color: var(--cyan);
+    box-shadow: 0 0 15px var(--cyan);
+    outline: none;
+}
+
+@keyframes neonInput {
+    0% {
+        box-shadow: var(--neon-soft) var(--cyan);
+    }
+
+    50% {
+        box-shadow: var(--neon-strong) var(--cyan);
+    }
+
+    100% {
+        box-shadow: var(--neon-soft) var(--cyan);
+    }
+}
+
+
+.button {
+    width: 9rem;
+    height: 3rem;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    background-color: var(--green);
+    color: white;
+
+    border: 4px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: 0.3s;
+    animation: neonBtn 2s infinite ease-in-out;
+}
+
+@keyframes neonBtn {
+    0% {
+        box-shadow: var(--neon-soft) var(--green);
+    }
+
+    50% {
+        box-shadow: var(--neon-strong) var(--green);
+    }
+
+    100% {
+        box-shadow: var(--neon-soft) var(--green);
+    }
+}
+
+.button:hover,
+.button:focus {
+    background-color: #35ff3f;
+    border-color: var(--green);
+    transform: scale(1.15);
+    box-shadow: 0 0 18px #35ff3f;
+}
+
+h2 {
+    margin: 35px 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--cyan);
+    line-height: 1.1;
+    animation: neonResult 2s infinite alternate;
+}
+
+@keyframes neonResult {
+    from {
+        text-shadow: var(--neon-soft) var(--cyan);
+    }
+
+    to {
+        text-shadow: var(--neon-strong) var(--cyan);
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.3rem;
+        top: 5px;
+    }
+
+    form {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+    }
+
+    .button {
+        width: 100%;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+    
+    
+    
+    
+    
